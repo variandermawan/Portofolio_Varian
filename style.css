@@ -1,0 +1,177 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f9fafb;
+  color: #333;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(-45deg, #a8edea, #fed6e3, #d4fc79, #cfd9df);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+  color: #333;
+  text-align: center;
+  padding: 50px 20px;
+  position: relative;
+}
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.hero img {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  border: 4px solid #fff;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+.hero h1 {
+  font-size: 26px;
+  margin: 8px 0;
+}
+.hero p {
+  font-size: 15px;
+  opacity: 0.85;
+}
+.wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+}
+
+/* Container */
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: grid;
+  gap: 30px;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+.card h2 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #a06cd5;
+}
+.card p,
+.card li {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* List rapi kiri */
+.card ul {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.card ul li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 8px;
+}
+.card ul li::before {
+  content: "•";
+  color: #a06cd5;
+  position: absolute;
+  left: 0;
+  font-size: 18px;
+}
+
+/* Skills */
+.skill {
+  margin: 12px 0;
+}
+.skill-name {
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.skill-bar {
+  background: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 10px;
+}
+.skill-fill {
+  height: 10px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #a06cd5, #d4a5ff);
+  width: 0;
+  animation: fillBar 2s forwards;
+}
+@keyframes fillBar {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--target-width);
+  }
+}
+
+/* Contact */
+.kontak-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.kontak-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+}
+.kontak-item i {
+  color: #a06cd5;
+  font-size: 18px;
+  width: 20px;
+  text-align: center;
+}
+.kontak-item a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+.kontak-item a:hover {
+  color: #a06cd5;
+}
+
+/* Footer tipis */
+.footer {
+  text-align: center;
+  padding: 10px 0;
+  background: #a06cd5;
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 0.3px;
+  margin-top: 30px;
+}
